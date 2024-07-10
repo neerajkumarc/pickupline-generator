@@ -25,7 +25,7 @@ const PickupLineList: React.FC<PickupLineListProps> = ({ pickuplines }) => {
             }}><RiFileCopy2Line /></button></p>
             </div>
             <p className="leading-relaxed text-[#FF2157] text-lg text-left">{line.pickupline}</p>
-            <p className="text-right text-[#FF2157]"><button onClick={() => {deletePickupLine(line.id)
+            <p className="text-right text-[#FF2157]"><button onClick={async () => {await deletePickupLine(line.id)
               toast("Deleted ✅!")
             }}><MdDeleteOutline /></button></p>
           </li>
